@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"vinyl-ftp",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "vinyl-ftp",
+    "description": "api documentation for [vinyl-ftp (v0.6.0)](https://github.com/morris/vinyl-ftp#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-vinyl-ftp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vinyl-ftp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp)",
     "devDependencies": {
-        "vinyl-ftp": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
-        "utility2": "kaizhu256/node-utility2#alpha"
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "vinyl-ftp": "*"
     },
-    "name":"npmdoc-vinyl-ftp",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-vinyl-ftp",
+    "keywords": [
+        "documentation",
+        "vinyl-ftp"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_vinyl_ftp.js",
+    "name": "npmdoc-vinyl-ftp",
+    "nameAlias": "npmdoc_vinyl_ftp",
+    "nameOriginal": "npmdoc-vinyl-ftp",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-vinyl-ftp"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
