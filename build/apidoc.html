@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.vinyl-ftp.vinyl-ftp">
+            function <span class="apidocSignatureSpan"></span>vinyl-ftp
+            <span class="apidocSignatureSpan">( config )</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.vinyl-ftp.create">
             function <span class="apidocSignatureSpan">vinyl-ftp.</span>create
             <span class="apidocSignatureSpan">( config )</span>
@@ -350,6 +359,39 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.vinyl-ftp" id="apidoc.module.vinyl-ftp">module vinyl-ftp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vinyl-ftp.vinyl-ftp" id="apidoc.element.vinyl-ftp.vinyl-ftp">
+        function <span class="apidocSignatureSpan"></span>vinyl-ftp
+        <span class="apidocSignatureSpan">( config )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function VinylFtp( config ) {
+
+	if ( !( this instanceof VinylFtp ) ) return new VinylFtp( config );
+
+	this.config = assign( {
+		parallel:       3,
+		maxConnections: config.parallel || 5,
+		log:            null,
+		timeOffset:     0,
+		idleTimeout:    100,
+		password:       config.password || config.pass,
+		reload:         false
+	}, config );
+
+	// connection pool
+	this.queue = [];
+	this.connectionCount = 0;
+	this.idle = [];
+	this.idleTimer = null;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
