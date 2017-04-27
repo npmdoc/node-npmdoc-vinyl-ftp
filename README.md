@@ -1,6 +1,6 @@
 # npmdoc-vinyl-ftp
 
-#### api documentation for  [vinyl-ftp (v0.6.0)](https://github.com/morris/vinyl-ftp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-vinyl-ftp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vinyl-ftp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp)
+#### basic api documentation for  [vinyl-ftp (v0.6.0)](https://github.com/morris/vinyl-ftp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-vinyl-ftp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vinyl-ftp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vinyl-ftp)
 
 #### Vinyl adapter for FTP
 
@@ -80,7 +80,8 @@
     "scripts": {
         "test": "istanbul cover node_modules/mocha/bin/_mocha test"
     },
-    "version": "0.6.0"
+    "version": "0.6.0",
+    "bin": {}
 }
 ```
 
